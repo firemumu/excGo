@@ -1,0 +1,31 @@
+mybatis:
+    mapper-locations: classpath:mapper/*.xml
+    type-aliases-package: com.excgo.dao
+
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    support-methods-arguments: true
+    params: count=countSql
+
+server:
+    port: 80
+
+spring: 
+    thymeleaf:
+        prefix: classpath:/templates/
+        check-template-location: TRUE
+        suffix: .html
+        encoding: UTF-8
+        content-type: text/html
+        mode: HTML5
+        cache: FALSE
+    datasource:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driverClassName: com.mysql.jdbc.Driver
+        url: jdbc:mysql://rm-wz96on74u8qx2nxom.mysql.rds.aliyuncs.com:3306/excgo_blog?useUnicode:true&amp;characterEncoding:UTF-8
+        username: root
+        password: 1qaz2wsX
+        initialSize: 20
+        minIdle: 10
+        maxActive: 100
